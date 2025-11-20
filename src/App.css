@@ -1,0 +1,106 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.app-nav {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-nav button {
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  background: white;
+  color: #666;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.app-nav button.active {
+  color: #2196F3;
+  border-bottom-color: #2196F3;
+  font-weight: 600;
+}
+
+.app-nav button:hover {
+  background: #f5f5f5;
+}
+
+.btn-recarregar {
+  padding: 0.5rem 0.75rem !important;
+  min-width: auto !important;
+  font-size: 1.125rem !important;
+  background: #4caf50 !important;
+  color: white !important;
+  border-radius: 4px;
+}
+
+.btn-recarregar:hover {
+  background: #45a049 !important;
+}
+
+.app-main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive */
+.status-indicator {
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.status-ok {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.status-erro {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.status-info {
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+

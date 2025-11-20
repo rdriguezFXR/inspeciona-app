@@ -1,0 +1,145 @@
+.busca-container {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.busca-container h2 {
+  margin-bottom: 1.5rem;
+  color: #2196F3;
+  font-size: 1.25rem;
+}
+
+.busca-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.busca-box input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.busca-box input:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+.btn-buscar {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-buscar:hover {
+  background: #1976D2;
+}
+
+.resultado {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.resultado.encontrado {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+}
+
+.resultado.nao-encontrado {
+  background: #ffebee;
+  border: 2px solid #f44336;
+}
+
+.status-ok {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  color: #2e7d32;
+}
+
+.status-ok .icon {
+  font-size: 1.5rem;
+  color: #4caf50;
+}
+
+.status-nao-encontrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c62828;
+}
+
+.status-nao-encontrado .icon {
+  font-size: 2rem;
+  color: #f44336;
+}
+
+.detalhes-veiculo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.detalhe-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+}
+
+.detalhe-item .label {
+  font-weight: 600;
+  color: #666;
+}
+
+.detalhe-item .value {
+  color: #333;
+}
+
+.value.status.verificado {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.value.status.nao-verificado {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.value.vencido {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.value.atencao {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.value.ok {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .detalhes-veiculo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

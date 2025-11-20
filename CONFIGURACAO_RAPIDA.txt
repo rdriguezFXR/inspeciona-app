@@ -1,0 +1,49 @@
+═══════════════════════════════════════════════════════════════
+  CONFIGURAÇÃO RÁPIDA - Inspeciona+ Samarco
+═══════════════════════════════════════════════════════════════
+
+✅ ARQUIVOS .env CRIADOS AUTOMATICAMENTE!
+
+Agora você precisa:
+
+1. EDITAR server/.env
+   - Abra o arquivo: server/.env
+   - Substitua "sua_chave_openai_aqui" pela sua chave real da OpenAI
+   - A chave começa com "sk-"
+   - Obtenha em: https://platform.openai.com/api-keys
+
+2. INICIAR O BACKEND
+   Abra o terminal e digite:
+   
+   cd server
+   npm install
+   npm run dev
+
+3. INICIAR O FRONTEND
+   Abra OUTRO terminal e digite:
+   
+   npm run dev
+
+═══════════════════════════════════════════════════════════════
+
+LOCALIZAÇÃO DOS ARQUIVOS:
+
+📁 server/.env
+   → Contém: PORT, OPENAI_API_KEY, DB_PATH
+   → ⚠️ EDITE E ADICIONE SUA API KEY!
+
+📁 .env (na raiz)
+   → Contém: VITE_API_URL
+   → ✅ Já está configurado!
+
+═══════════════════════════════════════════════════════════════
+
+PRÓXIMOS PASSOS:
+
+1. Edite server/.env e adicione sua API Key
+2. Execute: cd server && npm install
+3. Execute: cd server && npm run dev
+4. Em outro terminal: npm run dev
+
+═══════════════════════════════════════════════════════════════
+
