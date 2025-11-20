@@ -34,7 +34,7 @@ RUN apk add --no-cache bash
 # Copiar arquivos buildados
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Copiar configuração do nginx
+# Copiar configuração do nginx (template)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copiar script de entrada
