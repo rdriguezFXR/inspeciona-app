@@ -1,0 +1,27 @@
+node_modules
+.git
+.gitignore
+.env
+.env.local
+*.log
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Frontend (não necessário no backend)
+src
+public
+index.html
+vite.config.js
+package.json
+package-lock.json
+
+# Documentação
+*.md
+!server/README.md
+
+# Banco de dados (será criado no container)
+database/*.db
+database/*.db-journal
+

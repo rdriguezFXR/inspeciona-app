@@ -1,0 +1,37 @@
+node_modules
+dist
+.git
+.gitignore
+.env
+.env.local
+*.log
+.DS_Store
+.vite
+coverage
+.nyc_output
+*.swp
+*.swo
+*~
+
+# Documentação
+*.md
+!README.md
+
+# Scripts de configuração
+configurar.ps1
+CONFIGURACAO_RAPIDA.txt
+COMO_COMECAR.md
+INSTRUCOES_COMPLETAS.md
+INTEGRACAO_BACKEND.md
+PASSO_A_PASSO.md
+BANCO_DE_DADOS.md
+
+# Banco de dados (será criado no container)
+server/database/*.db
+server/database/*.db-journal
+
+# Arquivos temporários
+.tmp
+tmp
+temp
+
