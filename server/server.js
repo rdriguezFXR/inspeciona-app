@@ -9,8 +9,48 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 3001
 
+// Configuração CORS - permitir requisições do frontend
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Permitir requisições sem origin (mobile apps, curl, etc)
+    if (!origin) return callback(null, true)
+    
+    // Lista de origens permitidas
+    const allowedOrigins = [
+      process.env.FRONTEND_URL,
+      'http://localhost:5173',
+      'http://localhost:80',
+      'https://inspeciona.online',
+      /^https:\/\/.*\.easypanel\.host$/,
+      /^https:\/\/.*\.onrender\.com$/,
+      /^https:\/\/.*\.vercel\.app$/
+    ].filter(Boolean)
+    
+    // Verificar se a origem está permitida
+    const isAllowed = allowedOrigins.some(allowed => {
+      if (typeof allowed === 'string') {
+        return origin === allowed
+      }
+      if (allowed instanceof RegExp) {
+        return allowed.test(origin)
+      }
+      return false
+    })
+    
+    if (isAllowed || !origin) {
+      callback(null, true)
+    } else {
+      // Em produção, aceitar todas as origens (ajuste conforme necessário)
+      callback(null, true)
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}
+
 // Middlewares
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
